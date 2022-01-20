@@ -1,5 +1,6 @@
 import { tw, css } from 'twind/css';
 import Button from '@/../components/button';
+import { signIn } from 'next-auth/react';
 
 const headerStyle = css`
   background-color: #ffffff;
@@ -14,11 +15,16 @@ const Header = () => (
       </h1>
       <div className={tw(`max-w-xl mx-auto`)}>
         <p className={tw(`mt-10 text-gray-500 text-center text-xl lg:text-3xl`)}>
-        WSO2 Identity Server is an API-driven, open-source, cloud-native IAM product.
+          WSO2 Identity Server is an API-driven, open-source, cloud-native IAM product.
         </p>
       </div>
       <div className={tw(`mt-10 flex justify-center items-center w-full mx-auto`)}>
-      <Button primary>Login with Identity Server</Button>
+        <Button
+          onClick={(e) => {
+            e.preventDefault()
+            signIn("wso2is", { callbackUrl: "/home" })
+          }}
+          primary>Login with Identity Server</Button>
       </div>
     </div>
   </header>
