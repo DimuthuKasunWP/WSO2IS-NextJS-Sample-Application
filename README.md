@@ -4,7 +4,7 @@
 
 ## 🚀 Getting started
 
-Clone this repository and do the following inside the project folder:
+Clone this repository and checkout v1.0 branch. Run the following commands on the terminal inside the project folder:
 
 1. Run `cp .env.local.example .env.local`
 2. Run `yarn`
