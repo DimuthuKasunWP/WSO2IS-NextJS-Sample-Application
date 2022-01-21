@@ -4,7 +4,7 @@
 
 ## 🚀 Getting started
 
-Clone this repository and do the following inside the project folder:
+Clone this repository and checkout v2.0 branch. Do the following inside the project folder:
 
 1. Run `cp .env.local.example .env.local`
 2. Enter the WSO2 Identity Server configuration values to the respective fields in `.env.local`
